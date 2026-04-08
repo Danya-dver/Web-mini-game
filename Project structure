@@ -1,0 +1,18 @@
+web-mini-game-stand/
+├─ docker-compose.yml
+├─ README.md
+├─ .env
+├─ api/
+│  ├─ Dockerfile
+│  ├─ requirements.txt
+│  └─ app/
+│     └─ main.py
+├─ frontend/
+│  ├─ Dockerfile
+│  ├─ nginx.conf
+│  └─ public/
+│     ├─ index.html
+│     ├─ style.css
+│     └─ app.js
+└─ db/
+   └─ init.sql

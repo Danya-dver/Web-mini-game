@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Click Game</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="panel left">
+      <h1>Web Mini Game</h1>
+      <p class="subtitle">Кликай по цели как можно быстрее за 20 секунд</p>
+
+      <div class="controls">
+        <label for="playerName">Имя игрока</label>
+        <input id="playerName" type="text" maxlength="64" placeholder="Например: Alex" />
+
+        <div class="buttons">
+          <button id="startBtn">Старт</button>
+          <button id="resetBtn" class="secondary">Сброс</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>Время</span>
+          <strong id="timeValue">20</strong>
+        </div>
+        <div class="stat-card">
+          <span>Счёт</span>
+          <strong id="scoreValue">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Статус API</span>
+          <strong id="apiStatus">...</strong>
+        </div>
+      </div>
+
+      <div id="message" class="message"></div>
+
+      <div class="arena-wrapper">
+        <div id="arena" class="arena">
+          <button id="target" class="target" aria-label="target"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel right">
+      <h2>Лидерборд</h2>
+      <button id="refreshBtn" class="secondary full">Обновить</button>
+      <div id="leaderboard" class="leaderboard"></div>
+
+      <h2>Проверки системы</h2>
+      <div class="checks">
+        <div><code>GET /health</code> — frontend</div>
+        <div><code>GET /api/health/live</code> — api liveness</div>
+        <div><code>GET /api/health/ready</code> — api readiness</div>
+        <div><code>GET /api/health/full</code> — полная проверка</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

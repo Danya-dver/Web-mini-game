@@ -33,4 +33,5 @@ docker compose down
 
 Полная очистка
 docker compose down -v
+
 ---

@@ -1,4 +1,3 @@
-```sql
 CREATE TABLE IF NOT EXISTS scores (
     id SERIAL PRIMARY KEY,
     player_name VARCHAR(64) NOT NULL,
